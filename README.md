@@ -1,3 +1,14 @@
+---
+AIGC:
+    ContentProducer: Minimax Agent AI
+    ContentPropagator: Minimax Agent AI
+    Label: AIGC
+    ProduceID: "00000000000000000000000000000000"
+    PropagateID: "00000000000000000000000000000000"
+    ReservedCode1: 3046022100b27a7ae45f3dc96f14fd37b18675e3f898e024ef8139d331df2928db1bf77e0b022100b9ccbaa3517aab0434924d3b0a9c6da80a17d4da78349f772fab89a36e5bb510
+    ReservedCode2: 3044022013d88f0d0d11d31afa7d8aece67f9d88f083a6063fe66995b9565e1abdc191c7022005f0d284c99a9b2027aba83f42d71fbaad9b8f6897e9254253506d0928a0f7d2
+---
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started

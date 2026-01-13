@@ -1,26 +1,97 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Cyber-Minimalism Color Tokens */
+  --bg-void: #000000;
+  --bg-card: #0A0A0A;
+  --bg-surface: #111111;
+  --text-primary: #EDEDED;
+  --text-secondary: #A1A1AA;
+  --text-muted: #52525B;
+  --accent-neon: #00FF94;
+  --accent-purple: #BC13FE;
+  --accent-cyan: #00E0FF;
+  --border-dim: #333333;
+  --border-subtle: #222222;
+  
+  /* Shadow & Glow */
+  --glow-neon: 0 0 15px rgba(0, 255, 148, 0.4);
+  --glow-neon-strong: 0 0 25px rgba(0, 255, 148, 0.6);
+  
+  /* Transitions */
+  --transition-fast: 150ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-normal: 250ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-void: var(--bg-void);
+  --color-card: var(--bg-card);
+  --color-surface: var(--bg-surface);
+  --color-primary: var(--text-primary);
+  --color-secondary: var(--text-secondary);
+  --color-muted: var(--text-muted);
+  --color-neon: var(--accent-neon);
+  --color-purple: var(--accent-purple);
+  --color-cyan: var(--accent-cyan);
+  --color-border: var(--border-dim);
+  --color-border-subtle: var(--border-subtle);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg-void);
+  color: var(--text-primary);
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  min-height: 100vh;
+}
+
+::selection {
+  background: var(--accent-neon);
+  color: var(--bg-void);
+}
+
+/* Neon Glow Animation */
+@keyframes neon-pulse {
+  0%, 100% { box-shadow: var(--glow-neon); }
+  50% { box-shadow: var(--glow-neon-strong); }
+}
+
+/* Fade In Animation */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in-up 0.6s var(--transition-normal) forwards;
+}
+
+.animate-fade-in-delay-1 { animation-delay: 0.1s; }
+.animate-fade-in-delay-2 { animation-delay: 0.2s; }
+.animate-fade-in-delay-3 { animation-delay: 0.3s; }
+.animate-fade-in-delay-4 { animation-delay: 0.4s; }
+.animate-fade-in-delay-5 { animation-delay: 0.5s; }
+.animate-fade-in-delay-6 { animation-delay: 0.6s; }
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
 }
