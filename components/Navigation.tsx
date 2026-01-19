@@ -17,7 +17,7 @@ export function Navigation() {
 
   return (
     <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-50">
-      <div className="flex items-center gap-1 px-2 py-2 bg-[#0A0A0A]/80 backdrop-blur-xl border border-[#333] rounded-full">
+      <div className="flex items-center gap-1 px-2 py-2 bg-[#fff9ee]/90 backdrop-blur-xl border border-[#cdb892] rounded-full">
         {navItems.map((item) => {
           const isActive = pathname === item.href;
           const Icon = item.icon;
@@ -29,15 +29,15 @@ export function Navigation() {
                 relative flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium
                 transition-all duration-200
                 ${isActive 
-                  ? "text-[#00FF94] bg-[#00FF94]/10" 
-                  : "text-[#A1A1AA] hover:text-[#EDEDED] hover:bg-[#111]"
+                  ? "text-[#b88a3d] bg-[#b88a3d]/10" 
+                  : "text-[#5b4630] hover:text-[#2f2417] hover:bg-[#f1e7d6]"
                 }
               `}
             >
               <Icon className="w-4 h-4" />
               <span className="hidden md:inline">{item.label}</span>
               {isActive && (
-                <span className="absolute inset-0 rounded-full border border-[#00FF94]/50 pointer-events-none" />
+                <span className="absolute inset-0 rounded-full border border-[#b88a3d]/50 pointer-events-none" />
               )}
             </Link>
           );

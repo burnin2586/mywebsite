@@ -20,9 +20,9 @@ export function BentoCard({ children, className = "", span = "1", hover = true }
     <div
       className={`
         ${spanClasses[span]}
-        p-6 bg-[#0A0A0A] border border-[#333] rounded-xl
+        p-6 bg-[#fff9ee] border border-[#cdb892] rounded-xl
         transition-all duration-200
-        ${hover ? "hover:border-[#EDEDED] hover:scale-[1.01] hover:shadow-[inset_0_0_20px_rgba(0,0,0,0.5)]" : ""}
+        ${hover ? "hover:border-[#b88a3d] hover:scale-[1.01] hover:shadow-[inset_0_0_20px_rgba(184,138,61,0.2)]" : ""}
         ${className}
       `}
     >

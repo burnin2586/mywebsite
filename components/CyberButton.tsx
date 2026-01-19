@@ -26,12 +26,12 @@ export function CyberButton({
 
   const variantClasses = {
     primary: `
-      bg-transparent border border-[#00FF94] text-[#00FF94]
-      hover:shadow-[0_0_15px_rgba(0,255,148,0.4)] hover:bg-[#00FF94]/10
+      bg-transparent border border-[#b88a3d] text-[#b88a3d]
+      hover:shadow-[0_0_18px_rgba(184,138,61,0.35)] hover:bg-[#b88a3d]/10
     `,
     secondary: `
-      bg-[#111] text-[#EDEDED]
-      hover:bg-[#EDEDED] hover:text-[#000]
+      bg-[#f1e7d6] text-[#2f2417] border border-[#cdb892]
+      hover:bg-[#fff9ee] hover:text-[#2f2417] hover:border-[#b88a3d]
     `,
   };
 

@@ -8,12 +8,12 @@ export default function ArticlesPage() {
       <div className="max-w-4xl mx-auto">
         <header className="mb-12">
           <h1 className="text-4xl md:text-5xl font-bold tracking-tighter mb-4">
-            <span className="text-[#00FF94]">/</span>Articles
+            <span className="text-[#b88a3d]">/</span>Articles
           </h1>
-          <p className="text-[#A1A1AA] text-lg">Thoughts, tutorials, and insights</p>
+          <p className="text-[#5b4630] text-lg">Thoughts, tutorials, and insights</p>
         </header>
 
-        <div className="divide-y divide-[#222]">
+        <div className="divide-y divide-[#e2d4bc]">
           {articles.map((article) => (
             <Link
               key={article.id}
@@ -22,20 +22,20 @@ export default function ArticlesPage() {
             >
               <div className="flex-1">
                 <div className="flex items-center gap-4 mb-2">
-                  <span className="text-xs font-mono text-[#52525B] group-hover:text-[#00FF94] transition-colors">
+                  <span className="text-xs font-mono text-[#8a6f4b] group-hover:text-[#b88a3d] transition-colors">
                     {article.date}
                   </span>
-                  <span className="flex items-center gap-1 text-xs text-[#52525B]">
+                  <span className="flex items-center gap-1 text-xs text-[#8a6f4b]">
                     <Clock className="w-3 h-3" />
                     {article.readTime}
                   </span>
                 </div>
-                <h2 className="text-lg font-medium text-[#EDEDED] group-hover:text-[#00FF94] group-hover:translate-x-2 transition-all">
+                <h2 className="text-lg font-medium text-[#2f2417] group-hover:text-[#b88a3d] group-hover:translate-x-2 transition-all">
                   {article.title}
                 </h2>
-                <p className="text-sm text-[#A1A1AA] mt-1 hidden md:block">{article.excerpt}</p>
+                <p className="text-sm text-[#5b4630] mt-1 hidden md:block">{article.excerpt}</p>
               </div>
-              <ArrowRight className="w-5 h-5 text-[#52525B] group-hover:text-[#00FF94] transition-colors mt-4 md:mt-0" />
+              <ArrowRight className="w-5 h-5 text-[#8a6f4b] group-hover:text-[#b88a3d] transition-colors mt-4 md:mt-0" />
             </Link>
           ))}
         </div>

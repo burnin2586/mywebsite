@@ -1,22 +1,22 @@
 @import "tailwindcss";
 
 :root {
-  /* Cyber-Minimalism Color Tokens */
-  --bg-void: #000000;
-  --bg-card: #0A0A0A;
-  --bg-surface: #111111;
-  --text-primary: #EDEDED;
-  --text-secondary: #A1A1AA;
-  --text-muted: #52525B;
-  --accent-neon: #00FF94;
-  --accent-purple: #BC13FE;
-  --accent-cyan: #00E0FF;
-  --border-dim: #333333;
-  --border-subtle: #222222;
+  /* Retro-Futurism / Steampunk Color Tokens */
+  --bg-void: #f8f4ec;
+  --bg-card: #fff9ee;
+  --bg-surface: #f1e7d6;
+  --text-primary: #2f2417;
+  --text-secondary: #5b4630;
+  --text-muted: #8a6f4b;
+  --accent-neon: #b88a3d;
+  --accent-purple: #a35c2c;
+  --accent-cyan: #1f6f78;
+  --border-dim: #cdb892;
+  --border-subtle: #e2d4bc;
   
   /* Shadow & Glow */
-  --glow-neon: 0 0 15px rgba(0, 255, 148, 0.4);
-  --glow-neon-strong: 0 0 25px rgba(0, 255, 148, 0.6);
+  --glow-neon: 0 0 18px rgba(184, 138, 61, 0.35);
+  --glow-neon-strong: 0 0 28px rgba(184, 138, 61, 0.6);
   
   /* Transitions */
   --transition-fast: 150ms cubic-bezier(0.16, 1, 0.3, 1);
@@ -56,7 +56,7 @@ body {
 
 ::selection {
   background: var(--accent-neon);
-  color: var(--bg-void);
+  color: #2f2417;
 }
 
 /* Neon Glow Animation */
