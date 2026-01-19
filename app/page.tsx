@@ -16,14 +16,14 @@ export default function Home() {
         {/* Hero Section */}
         <section className="mb-16 opacity-0 animate-fade-in">
           <div className="flex items-center gap-2 mb-4">
-            <span className="w-2 h-2 rounded-full bg-[#00FF94] animate-pulse" />
-            <span className="text-sm font-mono text-[#00FF94] tracking-wide uppercase">Available for work</span>
+            <span className="w-2 h-2 rounded-full bg-[#b88a3d] animate-pulse" />
+            <span className="text-sm font-mono text-[#b88a3d] tracking-wide uppercase">Available for work</span>
           </div>
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tighter mb-6">
             Full-Stack<br />
-            <span className="text-[#00FF94]">Developer</span>
+            <span className="text-[#b88a3d]">Developer</span>
           </h1>
-          <p className="text-lg md:text-xl text-[#A1A1AA] max-w-2xl mb-8">
+          <p className="text-lg md:text-xl text-[#5b4630] max-w-2xl mb-8">
             Crafting digital experiences with precision and purpose. 
             Specializing in modern web technologies and scalable systems.
           </p>
@@ -43,26 +43,26 @@ export default function Home() {
           <BentoCard span="2" className="opacity-0 animate-fade-in animate-fade-in-delay-1">
             <div className="flex items-center justify-between mb-6">
               <h2 className="text-xl font-semibold">Featured Projects</h2>
-              <Link href="/projects" className="text-[#00FF94] hover:underline text-sm flex items-center gap-1">
+              <Link href="/projects" className="text-[#b88a3d] hover:underline text-sm flex items-center gap-1">
                 View All <ArrowRight className="w-3 h-3" />
               </Link>
             </div>
             <div className="space-y-4">
               {featuredProjects.map((project) => (
-                <div key={project.id} className="p-4 bg-[#111] rounded-lg border border-[#222] hover:border-[#00FF94]/50 transition-colors group">
+                <div key={project.id} className="p-4 bg-[#f1e7d6] rounded-lg border border-[#e2d4bc] hover:border-[#b88a3d]/50 transition-colors group">
                   <div className="flex items-start justify-between">
                     <div>
-                      <h3 className="font-medium mb-1 group-hover:text-[#00FF94] transition-colors">{project.title}</h3>
-                      <p className="text-sm text-[#A1A1AA] mb-3">{project.description}</p>
+                      <h3 className="font-medium mb-1 group-hover:text-[#b88a3d] transition-colors">{project.title}</h3>
+                      <p className="text-sm text-[#5b4630] mb-3">{project.description}</p>
                       <div className="flex flex-wrap gap-2">
                         {project.tags.slice(0, 3).map((tag) => (
-                          <span key={tag} className="px-2 py-1 text-xs font-mono bg-[#0A0A0A] border border-[#333] rounded">
+                          <span key={tag} className="px-2 py-1 text-xs font-mono bg-[#fff9ee] border border-[#cdb892] rounded">
                             {tag}
                           </span>
                         ))}
                       </div>
                     </div>
-                    <ExternalLink className="w-4 h-4 text-[#52525B] group-hover:text-[#00FF94] transition-colors flex-shrink-0" />
+                    <ExternalLink className="w-4 h-4 text-[#8a6f4b] group-hover:text-[#b88a3d] transition-colors flex-shrink-0" />
                   </div>
                 </div>
               ))}
@@ -72,14 +72,14 @@ export default function Home() {
           {/* Tech Stack */}
           <BentoCard className="opacity-0 animate-fade-in animate-fade-in-delay-2">
             <div className="flex items-center gap-2 mb-4">
-              <Code2 className="w-5 h-5 text-[#00FF94]" />
+              <Code2 className="w-5 h-5 text-[#b88a3d]" />
               <h2 className="text-lg font-semibold">Tech Stack</h2>
             </div>
             <div className="flex flex-wrap gap-2">
               {skills.slice(0, 8).map((skill) => (
                 <span
                   key={skill.name}
-                  className="px-3 py-1.5 text-xs font-mono bg-[#111] border border-[#333] rounded-full hover:border-[#00FF94] hover:text-[#00FF94] transition-colors cursor-default"
+                  className="px-3 py-1.5 text-xs font-mono bg-[#f1e7d6] border border-[#cdb892] rounded-full hover:border-[#b88a3d] hover:text-[#b88a3d] transition-colors cursor-default"
                 >
                   {skill.name}
                 </span>
@@ -91,17 +91,17 @@ export default function Home() {
           <BentoCard className="opacity-0 animate-fade-in animate-fade-in-delay-3">
             <h2 className="text-lg font-semibold mb-4">Connect</h2>
             <div className="space-y-3">
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-3 rounded-lg hover:bg-[#111] transition-colors group">
-                <Github className="w-5 h-5 text-[#52525B] group-hover:text-[#EDEDED]" />
-                <span className="text-sm text-[#A1A1AA] group-hover:text-[#EDEDED]">GitHub</span>
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-3 rounded-lg hover:bg-[#f1e7d6] transition-colors group">
+                <Github className="w-5 h-5 text-[#8a6f4b] group-hover:text-[#2f2417]" />
+                <span className="text-sm text-[#5b4630] group-hover:text-[#2f2417]">GitHub</span>
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-3 rounded-lg hover:bg-[#111] transition-colors group">
-                <Linkedin className="w-5 h-5 text-[#52525B] group-hover:text-[#EDEDED]" />
-                <span className="text-sm text-[#A1A1AA] group-hover:text-[#EDEDED]">LinkedIn</span>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-3 rounded-lg hover:bg-[#f1e7d6] transition-colors group">
+                <Linkedin className="w-5 h-5 text-[#8a6f4b] group-hover:text-[#2f2417]" />
+                <span className="text-sm text-[#5b4630] group-hover:text-[#2f2417]">LinkedIn</span>
               </a>
-              <a href="mailto:hello@example.com" className="flex items-center gap-3 p-3 rounded-lg hover:bg-[#111] transition-colors group">
-                <Mail className="w-5 h-5 text-[#52525B] group-hover:text-[#EDEDED]" />
-                <span className="text-sm text-[#A1A1AA] group-hover:text-[#EDEDED]">Email</span>
+              <a href="mailto:hello@example.com" className="flex items-center gap-3 p-3 rounded-lg hover:bg-[#f1e7d6] transition-colors group">
+                <Mail className="w-5 h-5 text-[#8a6f4b] group-hover:text-[#2f2417]" />
+                <span className="text-sm text-[#5b4630] group-hover:text-[#2f2417]">Email</span>
               </a>
             </div>
           </BentoCard>
@@ -110,22 +110,22 @@ export default function Home() {
           <BentoCard span="2" className="opacity-0 animate-fade-in animate-fade-in-delay-4">
             <div className="flex items-center justify-between mb-4">
               <h2 className="text-lg font-semibold">Latest Articles</h2>
-              <Link href="/articles" className="text-[#00FF94] hover:underline text-sm flex items-center gap-1">
+              <Link href="/articles" className="text-[#b88a3d] hover:underline text-sm flex items-center gap-1">
                 View All <ArrowRight className="w-3 h-3" />
               </Link>
             </div>
-            <div className="divide-y divide-[#222]">
+            <div className="divide-y divide-[#e2d4bc]">
               {latestArticles.map((article) => (
                 <Link key={article.id} href={`/articles/${article.slug}`} className="flex items-center justify-between py-3 group">
                   <div className="flex items-center gap-4">
-                    <span className="text-xs font-mono text-[#52525B] group-hover:text-[#00FF94] transition-colors w-20">
+                    <span className="text-xs font-mono text-[#8a6f4b] group-hover:text-[#b88a3d] transition-colors w-20">
                       {article.date}
                     </span>
-                    <span className="text-sm text-[#A1A1AA] group-hover:text-[#EDEDED] group-hover:translate-x-2 transition-all">
+                    <span className="text-sm text-[#5b4630] group-hover:text-[#2f2417] group-hover:translate-x-2 transition-all">
                       {article.title}
                     </span>
                   </div>
-                  <ArrowRight className="w-4 h-4 text-[#52525B] group-hover:text-[#00FF94] transition-colors" />
+                  <ArrowRight className="w-4 h-4 text-[#8a6f4b] group-hover:text-[#b88a3d] transition-colors" />
                 </Link>
               ))}
             </div>
@@ -134,16 +134,16 @@ export default function Home() {
           {/* About Preview */}
           <BentoCard span="2" className="opacity-0 animate-fade-in animate-fade-in-delay-5">
             <div className="flex items-start gap-6">
-              <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#00FF94] to-[#BC13FE] flex items-center justify-center flex-shrink-0">
-                <span className="text-2xl font-bold text-black">M</span>
+              <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#b88a3d] to-[#1f6f78] flex items-center justify-center flex-shrink-0">
+                <span className="text-2xl font-bold text-[#fff9ee]">M</span>
               </div>
               <div>
                 <h2 className="text-lg font-semibold mb-2">About Me</h2>
-                <p className="text-sm text-[#A1A1AA] mb-4">
+                <p className="text-sm text-[#5b4630] mb-4">
                   A passionate developer with expertise in building modern web applications. 
                   Focused on creating efficient, scalable, and user-centric solutions.
                 </p>
-                <Link href="/about" className="text-[#00FF94] hover:underline text-sm flex items-center gap-1">
+                <Link href="/about" className="text-[#b88a3d] hover:underline text-sm flex items-center gap-1">
                   Learn More <ArrowRight className="w-3 h-3" />
                 </Link>
               </div>
